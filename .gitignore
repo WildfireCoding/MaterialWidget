@@ -1,4 +1,7 @@
+# 参考[gitignore](https://github.com/github/gitignore)
+
 # Built application files
+
 *.apk
 *.ap_
 
