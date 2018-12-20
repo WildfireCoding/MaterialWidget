@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="material">
+        <attr name="MShadowRadius" format="float" />
+        <attr name="MShadowColor" format="color" />
+        <attr name="MShadowOffsetX" format="float" />
+        <attr name="MShadowOffsetY" format="float" />
+    </declare-styleable>
+
+</resources>
