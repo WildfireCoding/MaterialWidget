@@ -37,6 +37,7 @@ public class ViewCreateHelper {
                 case "TextView":
                     if (checkShadow(context, attrs)) {
                         view = new FactoryTextView(context, attrs);
+                        int id = view.getId();
                         ((FactoryTextView) view).initAttr(attrs);
                     }
                     break;
