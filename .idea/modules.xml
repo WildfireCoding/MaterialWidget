@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MaterialWighet.iml" filepath="$PROJECT_DIR$/MaterialWighet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaterialWidget.iml" filepath="$PROJECT_DIR$/MaterialWidget.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/materiallib/materiallib.iml" filepath="$PROJECT_DIR$/materiallib/materiallib.iml" />
     </modules>

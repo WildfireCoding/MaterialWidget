@@ -1,14 +1,11 @@
 package com.wildfire.materiallib;
 
 import android.content.Context;
-import android.content.res.TypedArray;
-import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 
 import com.wildfire.materiallib.core.ViewCreateHelper;
-import com.wildfire.materiallib.factory.FactoryTextView;
 
 /**
  * 每个Activity都有不同的LayoutInflater对象

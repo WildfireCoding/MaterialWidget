@@ -6,6 +6,9 @@ import androidx.core.view.LayoutInflaterCompat;
 import androidx.core.view.ViewCompat;
 
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,7 +25,8 @@ public class MainActivity extends MaterialActivity {
 
         setContentView(R.layout.activity_main);
 
-//        View view1 = findViewById(R.id.tv_1);
+
+
 //        View view2 =findViewById(R.id.tv_2);
 //        view1.setElevation(50);
 //        ViewCompat.setElevation(view1,23);

@@ -1,39 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.wildfire.materiallib.MaterialShadeLinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wildfire.materiallib.MaterialLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:material="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:orientation="vertical"
-    app:MShadowRadius="7.0"
     tools:context=".MainActivity">
-
-    <TextView
+    <com.wildfire.materiallib.factory.MaterialTextView
         android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:background="#000"
-        app:MShadowRadius = "11.0"
-        app:MShadowColor = "#333333"
-        app:MShadowOffsetX = "1.0"
-        app:MShadowOffsetY = "2.0"
-        android:text="Hello World!"
-        tools:ignore="MissingPrefix" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shadow_shape"
+        android:text="0度方向(阴影向右)"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        app:MShadowColor="#80333333"
+        app:MShadowCorner="10dp"
+        app:MShadowDirection="0"
+        app:MShadowOffset="5dp"
+        app:MShadowRadius="5dp" />
 
-    <TextView
-        app:MShadowRadius = "11.0"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <com.wildfire.materiallib.factory.MaterialTextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:background="#ff00ff" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shadow_shape"
+        android:text="90度方向（阴影向下）"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        app:MShadowColor="#80333333"
+        app:MShadowCorner="10dp"
+        app:MShadowDirection="90"
+        app:MShadowOffset="5dp"
+        app:MShadowRadius="5dp" />
 
-    <com.wildfire.materialwidget.CustomView
-        android:id="@+id/tv_3"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+    <com.wildfire.materiallib.factory.MaterialTextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp" />
-</com.wildfire.materiallib.MaterialShadeLinearLayout>
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shadow_shape"
+        android:text="180度方向（阴影向左）"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        app:MShadowColor="#80333333"
+        app:MShadowCorner="10dp"
+        app:MShadowDirection="180"
+        app:MShadowOffset="5dp"
+        app:MShadowRadius="5dp" />
+
+    <com.wildfire.materiallib.factory.MaterialTextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shadow_shape"
+        android:text="270度方向（阴影向上）"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        app:MShadowColor="#80333333"
+        app:MShadowCorner="10dp"
+        app:MShadowDirection="270"
+        app:MShadowOffset="5dp"
+        app:MShadowRadius="5dp" />
+
+    <com.wildfire.materiallib.factory.MaterialTextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shadow_shape"
+        android:text="(360+45)度方向(阴影右下)"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        app:MShadowColor="#80333333"
+        app:MShadowCorner="10dp"
+        app:MShadowDirection="405"
+        app:MShadowOffset="5dp"
+        app:MShadowRadius="5dp" />
+
+    <com.wildfire.materiallib.factory.MaterialTextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shadow_shape"
+        android:text="修改阴影颜色"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        app:MShadowColor="#80ff0000"
+        app:MShadowCorner="10dp"
+        app:MShadowDirection="405"
+        app:MShadowOffset="5dp"
+        app:MShadowRadius="5dp" />
+
+    <com.wildfire.materiallib.factory.MaterialTextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shadow_shape"
+        android:text="修改阴影偏移值"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        app:MShadowColor="#80ff0000"
+        app:MShadowCorner="10dp"
+        app:MShadowDirection="405"
+        app:MShadowOffset="2dp"
+        app:MShadowRadius="5dp" />
+
+    <com.wildfire.materiallib.factory.MaterialTextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shadow_shape_1"
+        android:text="阴影不占据view大小(不会阻挡view)"
+        android:textSize="10sp"
+        android:textColor="#0000ff"
+        android:gravity="center"
+        app:MShadowColor="#80666666"
+        app:MShadowCorner="10dp"
+        app:MShadowDirection="405"
+        app:MShadowOffset="2dp"
+        app:MShadowRadius="5dp" />
+
+</com.wildfire.materiallib.MaterialLinearLayout>

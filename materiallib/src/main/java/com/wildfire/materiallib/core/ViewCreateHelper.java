@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.wildfire.materiallib.IMaterialShadow;
 import com.wildfire.materiallib.R;
-import com.wildfire.materiallib.factory.FactoryTextView;
+import com.wildfire.materiallib.factory.MaterialTextView;
 
 /**
  * Author:wildfire
@@ -15,11 +15,7 @@ import com.wildfire.materiallib.factory.FactoryTextView;
  */
 public class ViewCreateHelper {
 
-    public static final int[] attr = {
-            R.attr.MShadowRadius,
-            R.attr.MShadowColor,
-            R.attr.MShadowOffsetX,
-            R.attr.MShadowOffsetY};
+
 
     /**
      * 创建View
@@ -35,11 +31,10 @@ public class ViewCreateHelper {
         if (parent instanceof IMaterialShadow) {
             switch (name) {
                 case "TextView":
-                    if (checkShadow(context, attrs)) {
-                        view = new FactoryTextView(context, attrs);
+                    /*if (checkShadow(context, attrs)) {
+                        view = new MaterialTextView(context,attrs);
                         int id = view.getId();
-                        ((FactoryTextView) view).initAttr(attrs);
-                    }
+                    }*/
                     break;
 
             }
@@ -53,11 +48,11 @@ public class ViewCreateHelper {
      *
      * @return 是否使用shadow
      */
-    private boolean checkShadow(Context context, AttributeSet attrs) {
+    /*private boolean checkShadow(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, new int[]{attr[0]});
         float radius = array.getFloat(0,0f);
         array.recycle();
         return radius != 0f;
-    }
+    }*/
 
 }
