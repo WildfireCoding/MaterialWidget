@@ -76,24 +76,24 @@ public class MaterialShadowHelper {
         canvas.drawPath(path, shadowPaint);
         canvas.restore();
 
-        float offsetReal = offset[1];
-        switch (child.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                if (useOffset - offsetReal <= mShadowOffsetMax) {
-                    useOffset += 20;
-                    child.setShadowOfForNow(useOffset);
-                    parent.invalidate();
-                }
-                break;
-            case MotionEvent.ACTION_CANCEL:
-            case MotionEvent.ACTION_UP:
-                if (useOffset > offsetReal) {
-                    useOffset -= 20;
-                    child.setShadowOfForNow(useOffset);
-                    parent.invalidate();
-                }
-                break;
-        }
+//        float offsetReal = offset[1];
+//        switch (child.getAction()) {
+//            case MotionEvent.ACTION_DOWN:
+//                if (useOffset - offsetReal <= mShadowOffsetMax) {
+//                    useOffset += 20;
+//                    child.setShadowOfForNow(useOffset);
+//                    parent.invalidate();
+//                }
+//                break;
+//            case MotionEvent.ACTION_CANCEL:
+//            case MotionEvent.ACTION_UP:
+//                if (useOffset > offsetReal) {
+//                    useOffset -= 20;
+//                    child.setShadowOfForNow(useOffset);
+//                    parent.invalidate();
+//                }
+//                break;
+//        }
 
     }
 

@@ -123,8 +123,8 @@ public class MaterialTextView extends AppCompatTextView implements IMaterialShad
 
         //波纹颜色
         mRippleColor = array.getColor(ATTR_RIPPLE_COLOR, Color.parseColor("#3f999999"));
-        //波纹速度（默认30）
-        mRippleRate = array.getDimension(ATTR_RIPPLE_RATE, 30f);
+        //波纹速度（默认50）
+        mRippleRate = array.getDimension(ATTR_RIPPLE_RATE, 40f);
         array.recycle();
 
         //set corner
