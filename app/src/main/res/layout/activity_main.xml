@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.wildfire.materiallib.MaterialLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wildfire.materiallib.parent.MaterialLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,13 +7,15 @@
     android:background="#ffffff"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <com.wildfire.materiallib.factory.MaterialTextView
+    <!--        android:background="@drawable/shadow_shape"
+-->
+    <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shadow_shape"
         android:text="0度方向(阴影向右)"
+        android:background="@drawable/shadow_shape"
         android:textColor="#ffffff"
         android:gravity="center"
         app:MShadowColor="#80333333"
@@ -22,7 +24,7 @@
         app:MShadowOffset="5dp"
         app:MShadowRadius="5dp" />
 
-    <com.wildfire.materiallib.factory.MaterialTextView
+    <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -37,7 +39,7 @@
         app:MShadowOffset="5dp"
         app:MShadowRadius="5dp" />
 
-    <com.wildfire.materiallib.factory.MaterialTextView
+    <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -52,7 +54,7 @@
         app:MShadowOffset="5dp"
         app:MShadowRadius="5dp" />
 
-    <com.wildfire.materiallib.factory.MaterialTextView
+    <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -67,7 +69,7 @@
         app:MShadowOffset="5dp"
         app:MShadowRadius="5dp" />
 
-    <com.wildfire.materiallib.factory.MaterialTextView
+    <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -82,7 +84,7 @@
         app:MShadowOffset="5dp"
         app:MShadowRadius="5dp" />
 
-    <com.wildfire.materiallib.factory.MaterialTextView
+    <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -97,7 +99,7 @@
         app:MShadowOffset="5dp"
         app:MShadowRadius="5dp" />
 
-    <com.wildfire.materiallib.factory.MaterialTextView
+    <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -112,7 +114,7 @@
         app:MShadowOffset="2dp"
         app:MShadowRadius="5dp" />
 
-    <com.wildfire.materiallib.factory.MaterialTextView
+    <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -127,4 +129,4 @@
         app:MShadowOffset="2dp"
         app:MShadowRadius="5dp" />
 
-</com.wildfire.materiallib.MaterialLinearLayout>
+</com.wildfire.materiallib.parent.MaterialLinearLayout>

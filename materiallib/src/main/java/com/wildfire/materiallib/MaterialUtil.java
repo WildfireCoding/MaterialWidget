@@ -1,19 +1,21 @@
 package com.wildfire.materiallib;
 
-import android.view.LayoutInflater;
-
-import androidx.core.view.LayoutInflaterCompat;
-
 /**
  * Author:wildfire
- * Time:2018/12/20
+ * Time:2018/12/23
  */
 public class MaterialUtil {
     /**
-     * install layoutInflater's factory
-     * @param layoutInflater LayoutInflater
+     * 计算偏移值
+     *
+     * @param direction 顺时针360度
+     * @return 偏移值
      */
-    public static void installFactory(LayoutInflater layoutInflater){
-        LayoutInflaterCompat.setFactory2(layoutInflater,ShadowFactory2.getInstance());
+    public static float[] calculateOffset(int direction, float shadowOffset) {
+        float[] offset = new float[2];
+        //Math.sin参数为角度对应的弧度（弧度的计算公式：2*PI/360;即PI/180）
+        offset[0] = shadowOffset * (float) (Math.cos((double) direction * Math.PI / 180));
+        offset[1] = shadowOffset * (float) (Math.sin((double) direction * Math.PI / 180));
+        return offset;
     }
 }

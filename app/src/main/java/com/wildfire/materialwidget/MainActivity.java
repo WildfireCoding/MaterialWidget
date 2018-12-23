@@ -1,23 +1,10 @@
 package com.wildfire.materialwidget;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.LayoutInflaterCompat;
-import androidx.core.view.ViewCompat;
-
-import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
 
-import com.wildfire.materiallib.ShadowFactory2;
-import com.wildfire.materiallib.base.MaterialActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends MaterialActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

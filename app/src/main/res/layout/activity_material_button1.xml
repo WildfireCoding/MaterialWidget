@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wildfire.materiallib.widget.MaterialLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MaterialButton1Activity">
+
+    <com.wildfire.materiallib.widget.MaterialTextView
+        android:id="@+id/tv_textView"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shadow_shape"
+        android:gravity="center"
+        android:text="Raised Button"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        app:MShadowCorner="10dp"
+        app:MShadowDirection="45"
+        app:MShadowOffset="5dp"
+        app:MShadowRadius="5dp" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:text="阴影方向（顺时针0～360度）" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/sb_direction"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:max="360"
+        android:progress="45" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="阴影偏移（0～100dp）(当然可以更大)" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/sb_offset"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:max="100"
+        android:progress="5" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="阴影模糊半径（0～50dp）(默认5dp)" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/sb_radius"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:max="50"
+        android:progress="5" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="阴影圆角（0～50dp）(默认10dp)" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/sb_corner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:max="50"
+        android:progress="10" />
+</com.wildfire.materiallib.widget.MaterialLinearLayout>
