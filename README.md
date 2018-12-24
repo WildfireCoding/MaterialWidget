@@ -1,4 +1,4 @@
-MaterialWighet
+# MaterialWighet
 
 A android material design library（支持5.0以下）
 
@@ -12,14 +12,14 @@ A android material design library（支持5.0以下）
    * 自定义阴影方向/颜色/模糊半径
    * 自定义波纹颜色/速度/背景
 
-## 使用
+### 使用
 
 1. 使用MaterialLinearLayout/MaterialFrameLayout/MaterialRelativeLayout作为直接父布局
 2. 使用MaterialTextView作为RaisedButton/FlatButton
 
 > 注：Material…Layout并不是作为Button的包裹类（即MaterialTextView可以与其他任何View在Material…Layout里进行布局）。
 
-### sample
+#### sample
 
 ```xml
 <com.wildfire.materiallib.widget.layout.MaterialLinearLayout
@@ -54,7 +54,7 @@ A android material design library（支持5.0以下）
 </com.wildfire.materiallib.widget.layout.MaterialLinearLayout>
 ```
 
-### attribute
+#### attribute
 
 ```xml
 <declare-styleable name="MaterialTextView">
