@@ -13,7 +13,6 @@ import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-import com.wildfire.materiallib.IMaterialShadow;
 import com.wildfire.materiallib.R;
 import com.wildfire.materiallib.UnitsUtil;
 
@@ -23,14 +22,12 @@ import androidx.appcompat.widget.AppCompatTextView;
 /**
  * MaterialTextView
  */
-public class MaterialTextView extends AppCompatTextView implements IMaterialShadow {
+public class MaterialTextView extends AppCompatTextView {
 
     /**
      * 阴影偏移
      */
     private float mShadowOffset;
-    private float mShadowOffsetReal;
-    private float[] shadowOffset = new float[2];
     /**
      * 阴影颜色
      */
@@ -59,10 +56,10 @@ public class MaterialTextView extends AppCompatTextView implements IMaterialShad
     private Paint ripplePaint = new Paint();
 
     private boolean hasAction = false;
-    private int action = -1;
 
     private int mRippleColor;
     private float mRippleRate;
+    private boolean mRippleEnable;
     /**
      * 该view所在矩形
      */
@@ -98,6 +95,7 @@ public class MaterialTextView extends AppCompatTextView implements IMaterialShad
     private static final int ATTR_SHADOW_OFFSET = R.styleable.MaterialTextView_MShadowOffset;
     private static final int ATTR_RIPPLE_COLOR = R.styleable.MaterialTextView_MRippleColor;
     private static final int ATTR_RIPPLE_RATE = R.styleable.MaterialTextView_MRippleRate;
+    private static final int ATTR_RIPPLE_ENABLE = R.styleable.MaterialTextView_MRippleEnable;
 
     /**
      * 初始化参数
@@ -113,18 +111,18 @@ public class MaterialTextView extends AppCompatTextView implements IMaterialShad
         if (mShadowOffset < 0) {
             mShadowOffset = 0;
         }
-        mShadowOffsetReal = mShadowOffset;
         //阴影圆角
         mShadowCorner = array.getDimension(ATTR_SHADOW_CORNER, 0f);
         //阴影方向（默认右下）
         mShadowDirection = array.getInteger(ATTR_SHADOW_DIRECTION, 45);
         //阴影模糊半径（默认5dp）
-        mShadowRadius = array.getDimension(ATTR_SHADOW_RADIUS, UnitsUtil.dp2px(context, 5f));
+        mShadowRadius = array.getInteger(ATTR_SHADOW_RADIUS, 10);
 
         //波纹颜色
         mRippleColor = array.getColor(ATTR_RIPPLE_COLOR, Color.parseColor("#3f999999"));
         //波纹速度（默认50）
         mRippleRate = array.getDimension(ATTR_RIPPLE_RATE, 40f);
+        mRippleEnable = array.getBoolean(ATTR_RIPPLE_ENABLE, true);
         array.recycle();
 
         //set corner
@@ -174,7 +172,7 @@ public class MaterialTextView extends AppCompatTextView implements IMaterialShad
      * @param canvas canvas
      */
     public void drawRipple(Canvas canvas) {
-        if (!isClickable() || !hasAction) return;
+        if (!isClickable() || !hasAction || !mRippleEnable) return;
         //2.绘制ripple
         rippleRadius += mRippleRate;
         canvas.save();
@@ -190,7 +188,6 @@ public class MaterialTextView extends AppCompatTextView implements IMaterialShad
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        action = event.getAction();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 rippleRadius = 0f;
@@ -209,30 +206,22 @@ public class MaterialTextView extends AppCompatTextView implements IMaterialShad
     }
 
 
-
-    @Override
-    public float[] getMShadowOffset() {
-        shadowOffset[0] = mShadowOffset;
-        shadowOffset[1] = mShadowOffsetReal;
-        return shadowOffset;
+    public float getMShadowOffset() {
+        return mShadowOffset;
     }
 
-    @Override
     public float getMShadowCorner() {
         return mShadowCorner;
     }
 
-    @Override
     public int getMShadowColor() {
         return mShadowColor;
     }
 
-    @Override
     public int getMShadowDirection() {
         return mShadowDirection;
     }
 
-    @Override
     public float getMShadowRadius() {
         return mShadowRadius;
     }
@@ -243,15 +232,11 @@ public class MaterialTextView extends AppCompatTextView implements IMaterialShad
         invalidate();
     }
 
-    @Override
     public void setMShadowOffset(float mShadowOffset) {
         this.mShadowOffset = mShadowOffset;
-        this.mShadowOffsetReal = mShadowOffset;
         invalidate();
     }
-    public void setShadowOfForNow(float offset){
-        mShadowOffset = offset;
-    }
+
     public void setMShadowRadius(float mShadowRadius) {
         this.mShadowRadius = mShadowRadius;
         invalidate();
@@ -267,12 +252,7 @@ public class MaterialTextView extends AppCompatTextView implements IMaterialShad
             }
         }
     }
-    public boolean getHasAction(){
-        return hasAction;
-    }
-    public int getAction(){
-        return action;
-    }
+
     public void setMShadowColor(int mShadowColor) {
         this.mShadowColor = mShadowColor;
         invalidate();

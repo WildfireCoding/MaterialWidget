@@ -6,10 +6,11 @@
         <attr name="MShadowCorner" format="dimension" />
         <attr name="MShadowOffset" format="dimension" />
         <attr name="MShadowDirection" format="integer" />
-        <attr name="MShadowRadius" format="dimension" />
+        <attr name="MShadowRadius" format="integer" />
 
         <attr name="MRippleColor" format="color"/>
         <attr name="MRippleRate" format="dimension"/>
+        <attr name="MRippleEnable" format="boolean"/>
     </declare-styleable>
 
 </resources>

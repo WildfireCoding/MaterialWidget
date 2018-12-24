@@ -5,13 +5,10 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Region;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.wildfire.materiallib.IMaterialShadow;
 import com.wildfire.materiallib.MaterialUtil;
-import com.wildfire.materiallib.UnitsUtil;
 import com.wildfire.materiallib.widget.MaterialTextView;
 
 /**
@@ -25,14 +22,12 @@ public class MaterialShadowHelper {
     private Path path = new Path();
 
     private ViewGroup parent;
-    private float mShadowOffsetMax;
 
     public MaterialShadowHelper(ViewGroup view) {
         this.parent = view;
         parent.setWillNotDraw(false);
         parent.setLayerType(View.LAYER_TYPE_SOFTWARE, shadowPaint);
         shadowPaint.setAntiAlias(true);
-        mShadowOffsetMax = UnitsUtil.dp2px(view.getContext(), 2f);
     }
 
     /**
@@ -55,16 +50,15 @@ public class MaterialShadowHelper {
     private void drawShadow(MaterialTextView child, Canvas canvas) {
         int shadowColor = child.getMShadowColor();
         float shadowCorner = child.getMShadowCorner();
-        float[] shadowOffset = child.getMShadowOffset();
-        float useOffset = shadowOffset[0];
+        float shadowOffset = child.getMShadowOffset();
         float shadowRadius = child.getMShadowRadius();
         int direction = child.getMShadowDirection();
         //not draw shadow if shadowRadius is zero
-        if (shadowRadius == 0f) {
+        if (shadowRadius <= 0f) {
             return;
         }
         //calculate offset
-        float[] offset = MaterialUtil.calculateOffset(direction, useOffset);
+        float[] offset = MaterialUtil.calculateOffset(direction, shadowOffset);
         shadowPaint.setShadowLayer(shadowRadius, offset[0], offset[1], shadowColor);
         rectShadow.set(child.getLeft(), child.getTop(), child.getRight(), child.getBottom());
         path.reset();
@@ -75,32 +69,5 @@ public class MaterialShadowHelper {
         canvas.clipPath(path, Region.Op.DIFFERENCE);
         canvas.drawPath(path, shadowPaint);
         canvas.restore();
-
-//        float offsetReal = offset[1];
-//        switch (child.getAction()) {
-//            case MotionEvent.ACTION_DOWN:
-//                if (useOffset - offsetReal <= mShadowOffsetMax) {
-//                    useOffset += 20;
-//                    child.setShadowOfForNow(useOffset);
-//                    parent.invalidate();
-//                }
-//                break;
-//            case MotionEvent.ACTION_CANCEL:
-//            case MotionEvent.ACTION_UP:
-//                if (useOffset > offsetReal) {
-//                    useOffset -= 20;
-//                    child.setShadowOfForNow(useOffset);
-//                    parent.invalidate();
-//                }
-//                break;
-//        }
-
-    }
-
-    /**
-     * 调整阴影偏移
-     */
-    private void adjustOffset() {
-
     }
 }

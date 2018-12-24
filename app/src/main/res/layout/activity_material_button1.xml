@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.wildfire.materiallib.widget.MaterialLinearLayout
+<com.wildfire.materiallib.widget.layout.MaterialLinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -22,7 +22,7 @@
         app:MShadowCorner="10dp"
         app:MShadowDirection="45"
         app:MShadowOffset="5dp"
-        app:MShadowRadius="5dp" />
+        app:MShadowRadius="10" />
 
     <TextView
         android:layout_width="300dp"
@@ -87,4 +87,4 @@
         android:layout_marginTop="5dp"
         android:max="50"
         android:progress="10" />
-</com.wildfire.materiallib.widget.MaterialLinearLayout>
+</com.wildfire.materiallib.widget.layout.MaterialLinearLayout>

@@ -22,7 +22,7 @@
         app:MShadowCorner="10dp"
         app:MShadowDirection="0"
         app:MShadowOffset="5dp"
-        app:MShadowRadius="5dp" />
+        app:MShadowRadius="10" />
 
     <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
@@ -37,7 +37,7 @@
         app:MShadowCorner="10dp"
         app:MShadowDirection="90"
         app:MShadowOffset="5dp"
-        app:MShadowRadius="5dp" />
+        app:MShadowRadius="10" />
 
     <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
@@ -52,7 +52,7 @@
         app:MShadowCorner="10dp"
         app:MShadowDirection="180"
         app:MShadowOffset="5dp"
-        app:MShadowRadius="5dp" />
+        app:MShadowRadius="10" />
 
     <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
@@ -67,7 +67,7 @@
         app:MShadowCorner="10dp"
         app:MShadowDirection="270"
         app:MShadowOffset="5dp"
-        app:MShadowRadius="5dp" />
+        app:MShadowRadius="10" />
 
     <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
@@ -82,7 +82,7 @@
         app:MShadowCorner="10dp"
         app:MShadowDirection="405"
         app:MShadowOffset="5dp"
-        app:MShadowRadius="5dp" />
+        app:MShadowRadius="10" />
 
     <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
@@ -97,7 +97,7 @@
         app:MShadowCorner="10dp"
         app:MShadowDirection="405"
         app:MShadowOffset="5dp"
-        app:MShadowRadius="5dp" />
+        app:MShadowRadius="10" />
 
     <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
@@ -112,7 +112,7 @@
         app:MShadowCorner="10dp"
         app:MShadowDirection="405"
         app:MShadowOffset="2dp"
-        app:MShadowRadius="5dp" />
+        app:MShadowRadius="10" />
 
     <com.wildfire.materiallib.parent.MaterialTextView
         android:layout_width="200dp"
@@ -127,6 +127,6 @@
         app:MShadowCorner="10dp"
         app:MShadowDirection="405"
         app:MShadowOffset="2dp"
-        app:MShadowRadius="5dp" />
+        app:MShadowRadius="10" />
 
 </com.wildfire.materiallib.parent.MaterialLinearLayout>
