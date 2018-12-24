@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:text="阴影模糊半径（0～50dp）(默认5dp)" />
+        android:text="阴影模糊半径（0～200）(默认10)" />
 
     <androidx.appcompat.widget.AppCompatSeekBar
         android:id="@+id/sb_radius"
@@ -69,8 +69,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
-        android:max="50"
-        android:progress="5" />
+        android:max="200"
+        android:progress="10" />
 
     <TextView
         android:layout_width="300dp"

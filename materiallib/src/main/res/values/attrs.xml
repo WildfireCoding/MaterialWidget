@@ -7,7 +7,7 @@
         <attr name="MShadowOffset" format="dimension" />
         <attr name="MShadowDirection" format="integer" />
         <attr name="MShadowRadius" format="integer" />
-
+        <attr name="MRippleBgColor" format="color"/>
         <attr name="MRippleColor" format="color"/>
         <attr name="MRippleRate" format="dimension"/>
         <attr name="MRippleEnable" format="boolean"/>

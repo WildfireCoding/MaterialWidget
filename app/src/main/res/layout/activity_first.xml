@@ -14,5 +14,7 @@
         android:text="MaterialTextView"
         android:gravity="center"
         android:layout_width="200dp"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        app:MShadowRadius="0"
+        app:MShadowCorner="10dp"/>
 </com.wildfire.materiallib.widget.layout.MaterialLinearLayout>

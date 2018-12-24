@@ -63,7 +63,7 @@ public class MaterialButton1Activity extends AppCompatActivity {
         seekBarRadius.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tv.setMShadowRadius(UnitsUtil.dp2px(MaterialButton1Activity.this, progress));
+                tv.setMShadowRadius(progress);
             }
 
             @Override

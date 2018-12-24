@@ -58,6 +58,7 @@ public class MaterialTextView extends AppCompatTextView {
     private boolean hasAction = false;
 
     private int mRippleColor;
+    private int mRippleBgColor;
     private float mRippleRate;
     private boolean mRippleEnable;
     /**
@@ -96,6 +97,7 @@ public class MaterialTextView extends AppCompatTextView {
     private static final int ATTR_RIPPLE_COLOR = R.styleable.MaterialTextView_MRippleColor;
     private static final int ATTR_RIPPLE_RATE = R.styleable.MaterialTextView_MRippleRate;
     private static final int ATTR_RIPPLE_ENABLE = R.styleable.MaterialTextView_MRippleEnable;
+    private static final int ATTR_RIPPLE_BG_COLOR = R.styleable.MaterialTextView_MRippleBgColor;
 
     /**
      * 初始化参数
@@ -120,6 +122,7 @@ public class MaterialTextView extends AppCompatTextView {
 
         //波纹颜色
         mRippleColor = array.getColor(ATTR_RIPPLE_COLOR, Color.parseColor("#3f999999"));
+        mRippleBgColor = array.getColor(ATTR_RIPPLE_BG_COLOR, Color.parseColor("#1f999999"));
         //波纹速度（默认50）
         mRippleRate = array.getDimension(ATTR_RIPPLE_RATE, 40f);
         mRippleEnable = array.getBoolean(ATTR_RIPPLE_ENABLE, true);
@@ -171,10 +174,15 @@ public class MaterialTextView extends AppCompatTextView {
      *
      * @param canvas canvas
      */
-    public void drawRipple(Canvas canvas) {
+    private void drawRipple(Canvas canvas) {
         if (!isClickable() || !hasAction || !mRippleEnable) return;
+        //1.绘制扁平按钮的波纹背景
+        if (mShadowOffset == 0) {
+            drawRippleBackground(canvas);
+        }
         //2.绘制ripple
         rippleRadius += mRippleRate;
+        ripplePaint.setColor(mRippleColor);
         canvas.save();
         canvas.clipPath(path);
         canvas.drawCircle(rippleCenterX, rippleCenterY, rippleRadius, ripplePaint);
@@ -184,6 +192,13 @@ public class MaterialTextView extends AppCompatTextView {
         }
     }
 
+    /**
+     * 绘制扁平按钮的波纹背景
+     */
+    private void drawRippleBackground(Canvas canvas) {
+        ripplePaint.setColor(mRippleBgColor);
+        canvas.drawPath(path, ripplePaint);
+    }
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
