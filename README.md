@@ -2,7 +2,7 @@ MaterialWighet
 
 A android material design library（支持5.0以下）
 
-![2018-12-24 12.37.58](/Users/aaronxu/Desktop/2018-12-24 12.37.58.gif)
+![2018-12-24 12.37.58](https://github.com/WildfireCoding/MaterialWidget/blob/master/data/gif_material_button.gif)
 
 ## 功能
 
