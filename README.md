@@ -2,11 +2,7 @@ MaterialWighet
 
 A android material design library（支持5.0以下）
 
-<video >
-    <source id="webm" src = "https://raw.githubusercontent.com/WildfireCoding/MaterialWidget/master/data/material.webm"
-</video>
-
-
+![2018-12-24 12.37.58](/Users/aaronxu/Desktop/2018-12-24 12.37.58.gif)
 
 ## 功能
 
