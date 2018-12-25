@@ -157,8 +157,8 @@ public class MaterialTextView extends AppCompatTextView {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
         drawRipple(canvas);
+        super.onDraw(canvas);
     }
 
     /**
