@@ -113,6 +113,7 @@ public class MaterialTextView extends AppCompatTextView {
         if (mShadowOffset < 0) {
             mShadowOffset = 0;
         }
+
         //阴影圆角
         mShadowCorner = array.getDimension(ATTR_SHADOW_CORNER, 0f);
         //阴影方向（默认右下）

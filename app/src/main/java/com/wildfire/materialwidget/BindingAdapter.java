@@ -13,6 +13,6 @@ public class BindingAdapter {
             "MShadowRadius",
             "MShadowCorner"},requireAll = false)
     public static void bindMaterial(MaterialTextView textView) {
-        
+
     }
 }

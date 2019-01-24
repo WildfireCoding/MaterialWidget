@@ -1,5 +1,9 @@
 package com.wildfire.materiallib;
 
+import android.widget.TextView;
+
+import androidx.databinding.BindingAdapter;
+
 /**
  * Author:wildfire
  * Time:2018/12/23
@@ -17,5 +21,13 @@ public class MaterialUtil {
         offset[0] = shadowOffset * (float) (Math.cos((double) direction * Math.PI / 180));
         offset[1] = shadowOffset * (float) (Math.sin((double) direction * Math.PI / 180));
         return offset;
+    }
+
+    @BindingAdapter(value = {"bind_material_shadow_color"}, requireAll = false)
+    public static void bindMaterialText(
+            TextView textView,
+            int shadowColor
+    ) {
+
     }
 }
